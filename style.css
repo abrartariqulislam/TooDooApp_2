@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+ul {
+  list-style: none;
+}
+body {
+  background-color: #A8A2D2;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.todoApp{
+  width: 700px;
+  background-color: #BBDAF6;
+  padding: 50px;
+  border-radius: 20px;
+}
+.todoApp h1{
+  margin-bottom: 15px;
+  color: #7f6cf8;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.todoApp .inputFelid{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: #5173BD;
+  height: 50px;
+  padding: 10px 0 10px 10px;
+  border-radius: 25px;
+}
+.todoApp .inputFelid input{
+  flex-grow: 1;
+  height: 100%;
+  background: unset;
+  border: unset;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 25px;
+  padding: 10px;
+}
+.todoApp .inputFelid input::placeholder{
+  color: #a9a9a9;
+}
+.todoApp .inputFelid input:focus{
+  border: unset;
+  outline: unset;
+  box-shadow: 0 0 30px #a9a9a998;
+}
+.todoApp .inputFelid button{
+  height: 50px;
+  width: 70px;
+  border-radius: 25px;
+  border: unset;
+  background: #509D2B;
+  font-size: 30px;
+  color: #BBDAF6;
+}
