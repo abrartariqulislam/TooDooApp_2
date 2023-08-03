@@ -39,7 +39,7 @@ body {
   border-radius: 25px;
   margin-bottom: 30px;
 }
-.todoApp .inputFelid input {
+.todoApp .inputFelid input , ul li p input{
   flex-grow: 1;
   height: 100%;
   background: unset;
@@ -49,10 +49,10 @@ body {
   border-radius: 25px;
   padding: 10px;
 }
-.todoApp .inputFelid input::placeholder {
+.todoApp .inputFelid input::placeholder ,ul li p input::placeholder{
   color: #a9a9a9;
 }
-.todoApp .inputFelid input:focus {
+.todoApp .inputFelid input:focus ,ul li p input:focus{
   border: unset;
   outline: unset;
   box-shadow: 0 0 30px #a9a9a998;
@@ -70,7 +70,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   padding: 7px;
   border:3px solid #425D10;
   margin-bottom: 15px;
@@ -98,6 +98,12 @@ body {
   flex-grow: 1;
   color: #0B2F6D;
   font-size: 20px;
+  flex-grow: 1;
+}
+ul li p input{
+  width: 100%;
+  color: #636363;
+  box-shadow: 0 0 30px #a9a9a998;
 }
 .todoApp ul li .edit {
   height: 50px;
@@ -107,6 +113,7 @@ body {
   border: unset;
   background: #79127F;
   color: #F7C003;
+  margin-right: 10px;
 }
 .todoApp ul li .delete {
   height: 50px;
@@ -116,4 +123,8 @@ body {
   border: unset;
   background: #DB2879;
   color: #F7C003;
+}
+.line_del{
+text-decoration: line-through;
+color: #0b2f6d7a!important;
 }
