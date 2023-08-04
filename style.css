@@ -114,6 +114,7 @@ ul li p input{
   background: #79127F;
   color: #F7C003;
   margin-right: 10px;
+  transition: 0.05s;
 }
 .todoApp ul li .delete {
   height: 50px;
@@ -123,6 +124,7 @@ ul li p input{
   border: unset;
   background: #DB2879;
   color: #F7C003;
+  transition: 0.05s;
 }
 .line_del{
 text-decoration: line-through;

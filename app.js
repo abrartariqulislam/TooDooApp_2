@@ -71,3 +71,36 @@ ul.addEventListener("click", function (e) {
     taskBtn.remove();
   }
 });
+
+ul.addEventListener("mousedown", function(e) {
+  const taskBtn = e.target;
+  console.log(taskBtn);
+  if (taskBtn.className === "fa-solid fa-trash-can") {
+    taskBtn.parentElement.style.backgroundColor = "#DB287980"
+  }
+  if (taskBtn.className === "delete") {
+    taskBtn.style.backgroundColor = "#DB287980"
+  }
+  if   (taskBtn.className === "fa-regular fa-pen-to-square"){
+    taskBtn.parentElement.style.backgroundColor = "#79127F80"
+  }
+  if   (taskBtn.className === "edit"){
+    taskBtn.style.backgroundColor = "#79127F80"
+  }
+})
+ul.addEventListener("mouseup", function(e) {
+  const taskBtn = e.target;
+  console.log(taskBtn);
+  if (taskBtn.className === "fa-solid fa-trash-can") {
+    taskBtn.parentElement.style.backgroundColor = "#DB2879"
+  }
+  if (taskBtn.className === "delete") {
+    taskBtn.style.backgroundColor = "#DB2879"
+  }
+  if   (taskBtn.className === "fa-regular fa-pen-to-square"){
+    taskBtn.parentElement.style.backgroundColor = "#79127F"
+  }
+  if   (taskBtn.className === "edit"){
+    taskBtn.style.backgroundColor = "#79127F"
+  }
+})
