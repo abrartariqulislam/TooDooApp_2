@@ -40,6 +40,12 @@ addBtn.addEventListener("click", function (e) {
     addTask(taskName);
   }
 });
+addBtn.addEventListener("mousedown" , function(e) {
+  this.style.backgroundColor = "#509d2b80"
+})
+addBtn.addEventListener("mouseup" , function(e) {
+  this.style.backgroundColor = "#509d2b"
+})
 
 ul.addEventListener("click", function (e) {
   const taskBtn = e.target;

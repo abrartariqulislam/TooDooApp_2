@@ -65,6 +65,7 @@ body {
   background: #509d2b;
   font-size: 30px;
   color: #bbdaf6;
+  transition: 0.05s;
 }
 .todoApp ul li {
   display: flex;
