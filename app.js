@@ -15,12 +15,25 @@ function addTask(taskName) {
   input.value = "";
 }
 
+function addEditInput(editInput , p) {
+  editInput.value = p.textContent;
+  p.textContent = "";
+  p.append(editInput);
+  editInput.addEventListener("keypress", function (e) {
+    const newInputValue = e.target.value;
+    if (newInputValue && e.key === "Enter") {
+      p.innerHTML = newInputValue;
+    }
+  });
+}
+
 input.addEventListener("keypress", function (e) {
   const taskName = e.target.value;
   if (taskName && e.key === "Enter") {
     addTask(taskName);
   }
 });
+
 addBtn.addEventListener("click", function (e) {
   const taskName = input.value;
   if (taskName) {
@@ -30,21 +43,22 @@ addBtn.addEventListener("click", function (e) {
 
 ul.addEventListener("click", function (e) {
   const taskBtn = e.target;
+  console.log(taskBtn);
   if (taskBtn.className === "fa-solid fa-trash-can") {
     taskBtn.parentElement.parentElement.remove();
+  }
+  if (taskBtn.className === "delete") {
+    taskBtn.parentElement.remove();
   }
   if (taskBtn.className === "fa-regular fa-pen-to-square") {
     const p = taskBtn.parentElement.previousElementSibling;
     const editInput = document.createElement("input");
-    editInput.value = p.textContent;
-    p.textContent = "";
-    p.append(editInput);
-    editInput.addEventListener("keypress", function (e) {
-      const newInputValue = e.target.value;
-      if (newInputValue && e.key === "Enter") {
-        p.innerHTML = newInputValue;
-      }
-    });
+    addEditInput(editInput ,p)
+  }
+  if (taskBtn.className === "edit") {
+    const p = taskBtn.previousElementSibling;
+    const editInput = document.createElement("input");
+    addEditInput(editInput ,p)
   }
   if (taskBtn.className === "chickBtn") {
     const p = taskBtn.parentElement.children[1];
