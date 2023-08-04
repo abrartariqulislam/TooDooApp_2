@@ -5,12 +5,12 @@ const ul = document.querySelector("ul");
 function addTask(taskName) {
   const li = document.createElement("li");
   li.innerHTML = `
-    <button class="chickBtn"></button>
+    <button class="chickBtn" data-btn="Status Change"></button>
     <p>${taskName}</p>
-    <button class="edit">
+    <button class="edit"data-btn="Edit Task">
       <i class="fa-regular fa-pen-to-square"></i>
     </button>
-    <button class="delete"><i class="fa-solid fa-trash-can"></i></button>`;
+    <button class="delete" data-btn="Delete"><i class="fa-solid fa-trash-can"></i></button>`;
   ul.prepend(li);
   input.value = "";
 }

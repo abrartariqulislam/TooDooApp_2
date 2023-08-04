@@ -131,3 +131,21 @@ ul li p input{
 text-decoration: line-through;
 color: #0b2f6d7a!important;
 }
+button{
+  position: relative;
+  z-index: 5;
+  transition: 0.05s;
+}
+ button:hover::after{
+  content:attr(data-btn);
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #a8a2d2;
+  color: #634ef1;
+  font-size: 16px;
+  padding: 6px 8px 8px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
